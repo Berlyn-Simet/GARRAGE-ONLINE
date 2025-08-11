@@ -1,0 +1,126 @@
+/* Estilos Base y para la Barra de Navegación Fija */
+body {
+    padding-top: 70px; /* Ajuste para la barra de navegación fija */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilos para el Header y la Imagen de Fondo */
+.header-main {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.header-bg {
+    background-image: url('https://t4.ftcdn.net/jpg/02/82/00/75/360_F_282007508_wdCUP7hUMNK1Cuzj7XmOcFmzyzJ0Nnp9.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh; /* Altura de la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Detrás del contenido */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Fondo semitransparente para la barra */
+}
+
+.navbar-brand .fa-car {
+    color: #0d6efd; /* Color primario de Bootstrap */
+}
+
+/* Estilos para las Tarjetas de Producto */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta crezca */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    height: 48px; /* Altura fija para dos líneas de texto */
+    overflow: hidden;
+}
+
+.card-text {
+    height: 40px; /* Altura fija para una o dos líneas */
+    overflow: hidden;
+    margin-bottom: auto; /* Empuja el contenido hacia abajo */
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+
+/* Animación "pulse" para el contador del carrito */
+#cartCount {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+    50% {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+
+/* Estilo para el Spinner de Carga */
+#loadingSpinner {
+    margin: 50px 0;
+}
+
+/* Estilos del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-item-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
